@@ -20,7 +20,6 @@ import Aura2 from "./assets/PROJECTSHOW/Aura2.png"
 const App = () => {
 
 
-  const [notification, setNotification] = useState(null);
 
 
 

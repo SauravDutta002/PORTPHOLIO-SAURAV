@@ -12,10 +12,10 @@ app.post('/send-email', async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail', // or 'hotmail', 'yahoo', etc.
+    service: 'gmail', 
     auth: {
       user: process.env.MY_EMAIL,
-      pass: process.env.MY_PASSWORD, // Use App Password if using Gmail with 2FA
+      pass: process.env.MY_PASSWORD,
     },
   });
 
@@ -31,9 +31,9 @@ app.post('/send-email', async (req, res) => {
     // res.status(200).json({ message: 'Email sent successfully.' });
     res.status(200).json({ success: true, message: 'Email sent successfully.' });
 
-    console.log("sent")
+    // console.log("sent")
   } catch (error) {
-    console.error(error);
+    // console.error(error);
     // res.status(500).json({ message: 'Email failed to send.' });
     res.status(500).json({ success: false, message: 'Email failed to send.' });
 
