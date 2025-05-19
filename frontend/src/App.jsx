@@ -19,6 +19,11 @@ import Aura2 from "./assets/PROJECTSHOW/Aura2.png"
 
 const App = () => {
 
+
+  const [notification, setNotification] = useState(null);
+
+
+
   const projectData = [
   {
     name: "AURA – Autonomous UAV for Rapid Assistance",
@@ -60,7 +65,7 @@ const App = () => {
         <Route path="/projects" element={<ProjectPage/>} />
         <Route path="/skills" element={<SkillsPage/>} />
         <Route path="/achievements" element={<Achivements/>} />
-        <Route path="/contact" element={<Contact/>} />
+        <Route path="/contact"  element={<Contact/>} />
         <Route path="/AURA" element={<ShowProject  name={projectData[0].name}
       image={projectData[0].image}
       description={projectData[0].description}

@@ -9,6 +9,7 @@ import Footer from './Footer';
 
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [notification, setNotification] = useState(null);
 
   const toggleSidebar = () => setSidebarOpen(prev => !prev);
 
@@ -19,10 +20,10 @@ const Layout = () => {
         <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         <div className="flex-1">
           <Header />
-          <Outlet />
+          <Outlet context={{ setNotification }}/>
         </div>
       </div>
-      <Footer />
+      <Footer notification={notification}/>
     </div>
   );
 };

@@ -11,6 +11,10 @@ import { SiZcool } from "react-icons/si";
 import { VscExtensions } from "react-icons/vsc";
 import { VscFiles } from "react-icons/vsc";
 
+//contact 
+import { VscFeedback } from "react-icons/vsc";
+
+
 // pages icon
 
 import { AiFillFolderOpen } from "react-icons/ai";
@@ -129,6 +133,8 @@ const Sidebar = ({ toggleSidebar }) => {
         <IconWrapper><VscSearch /></IconWrapper>
         <IconWrapper><GiDiamondTrophy /></IconWrapper>
         <IconWrapper><VscGithub /></IconWrapper>
+        <IconWrapper><VscFeedback /></IconWrapper>
+
       </div>
 
       {/* Bottom Icons */}
