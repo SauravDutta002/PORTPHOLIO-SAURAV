@@ -1,9 +1,6 @@
-
-
-   
-
 import React from 'react';
 import Typewriter from 'typewriter-effect';
+
 
 const About = () => {
   return (
@@ -15,12 +12,23 @@ const About = () => {
       <div className="absolute h-[80vh] left-4 md:left-9 z-10 text-white px-2 md:px-3 rounded-lg backdrop-blur-[2px] max-w-[90%] md:max-w-[70%] pointer-events-none">
         <h2 className="text-[26px] md:text-[35px] font-bold text-[#ec6e40] mb-1">About Me</h2>
         <p className="text-sm md:text-base text-gray-300">
-          I'm Saurav Dutta — a dedicated full-stack developer specializing in the MERN stack, with a strong passion for solving real-world problems through clean, efficient code. Beyond the screen, I'm an avid FPV drone builder, constantly exploring the intersection of hardware and software innovation. I thrive on challenges, whether it's debugging complex systems or pushing the limits of aerial tech, and I'm always eager to learn, build, and elevate every project I take on.
+          I'm Saurav Dutta, a full-stack developer with a strong focus on the MERN stack,
+    driven by a passion for building scalable, high-impact solutions. I specialize in
+    writing clean, efficient code to tackle real-world challenges and deliver seamless
+    user experiences. Outside of development, I’m an avid FPV drone enthusiast, where
+    I blend my love for hardware and software to innovate at the edge of aerial
+    technology. Whether I’m debugging intricate systems or fine-tuning flight dynamics,
+    I bring curiosity, precision, and a relentless drive to every project I take on.
         </p>
       </div>
 
+
+    
+
+
+
       {/* 💻 Code Block */}
-      <div className="text-[12px] md:text-[14px] leading-6 md:leading-7 p-2 md:p-4 opacity-[0.3] overflow-x-auto">
+      <div className="text-[12px] md:text-[14px] leading-6 md:leading-7 p-2 md:p-4 opacity-[0.3] overflow-x-auto relative w-full text-white py-10 px-6 max-h-[70vh] overflow-y-scroll">
         <div><span className="text-gray-500">1&nbsp;&nbsp;</span><span className="text-[#ec6e40]">import</span> <span className="text-white">React</span> <span className="text-[#ec6e40]">from</span> <span className="text-[#5482de]">'react'</span></div>
         <div><span className="text-gray-500">2&nbsp;&nbsp;</span><span className="text-[#ec6e40]">import</span> <span className="text-white">useState</span> <span className="text-[#ec6e40]">from</span> <span className="text-[#5482de]">'react'</span></div>
         <div><span className="text-gray-500">3&nbsp;&nbsp;</span><span className="text-[#ec6e40]">const</span> <span className="text-[#9cdcfe]">About</span> <span>=</span> <span>()</span> <span>=&gt;</span> <span>{'{'}</span></div>

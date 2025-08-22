@@ -100,7 +100,7 @@ const Header = () => {
       </ul>
 
       {/* Right Side Icons */}
-      <div className="flex justify-end items-center gap-2 sm:gap-3 px-2 sm:px-4 border-b py-3 border-[#ffffff32] text-lg sm:text-xl flex-grow min-w-fit">
+      <div className="flex justify-end items-center gap-2 sm:gap-3 px-2 sm:px-4 border-b py-3 border-[#ffffff32] text-lg sm:text-xl flex-grow min-w-fit cursor-pointer">
         <span className="text-[16px]">
           <FiPlay />
         </span>

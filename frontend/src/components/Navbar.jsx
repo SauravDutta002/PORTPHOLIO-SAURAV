@@ -63,7 +63,9 @@ function App() {
         <input 
           type="text"
           placeholder="PORTFOLIO-SAURAV"
-          className="w-full hidden md:block max-w-sm bg-transparent border border-gray-700 text-sm px-3 py-1 rounded-md placeholder-gray-400 focus:outline-none text-center"
+          className="w-full hidden md:block max-w-sm bg-transparent border border-gray-700 text-sm px-3 py-1 rounded-md placeholder-gray-400 focus:outline-none text-center cursor-crosshair"
+          readOnly
+          
         />
       </div>
 

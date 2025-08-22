@@ -11,9 +11,7 @@ const Home = () => {
     navigate('/projects');
   };
 
-  const myGithub = () => {
-    navigate('/');
-  };
+ 
 
   return (
     <div
@@ -31,17 +29,20 @@ const Home = () => {
         <div className="font-medium  text-xl sm:text-3xl md:text-[45px] text-gray-400 mt-3 min-h-[70px]">
           <Typewriter
             options={{
-              strings: [
-                'I am a Web Developer.',
-                'I am a MERN Stack Developer.',
-                'I am an FPV Drone Pilot.',
-                'I build high-performance custom drones.',
-                'I create fast, modern web apps.',
-                'I am passionate about blending technology with creativity.',
-                'I turn ideas into code and code into experience.',
-              ],
+             strings: [
+  'I am a passionate Web Developer.',
+  'I am a skilled MERN Stack Developer.',
+  'I am an experienced FPV Drone Pilot.',
+  'I design and build custom drones.',
+  'I develop fast, user-friendly web apps.',
+  'I combine tech expertise with creativity.',
+  'I transform ideas into real-world solutions.',
+],
               autoStart: true,
               loop: true,
+              delay:90,
+              
+              deleteSpeed:20,
             }}
           />
         </div>
@@ -49,18 +50,19 @@ const Home = () => {
         {/* Buttons */}
         <div className="flex  space-x-4 mt-6">
           <button
-            onClick={myGithub}
-            className="md:px-6 py-2 px-3 border border-[#ffffff32] rounded-2xl text-white hover:border-white transition flex items-center justify-center gap-2 backdrop-blur-[99px] "
+            
+            className="md:px-6 py-2 px-3 border border-[#ffffff62]  rounded-2xl text-white hover:border-white transition flex items-center justify-center gap-2 backdrop-blur-[99px] "
             aria-label="Go to Github"
           >
-            <SiRefinedgithub size={20} />
-            GitHub
+            <a className='flex items-center gap-2' href="https://github.com/SauravDutta002" target='_blank'><SiRefinedgithub size={20} className='' />
+            GitHub</a>
+            
           </button>
           <button
             onClick={handelClick}
-            className="md:px-6 py-2 px-3 flex items-center gap-2 border border-[#ffffff32] rounded-2xl text-white hover:border-white transition"
+            className="md:px-6 py-2 px-3 flex items-center gap-2 border border-[#ffffff62] rounded-2xl text-white hover:border-white transition"
           >
-            <DiCodeigniter size={20} />
+            <DiCodeigniter size={20} className='text-orange-500' />
             <span>Explore</span>
           </button>
 

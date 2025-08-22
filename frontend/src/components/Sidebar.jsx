@@ -37,7 +37,7 @@ const SidebarWithBox = ({ isOpen, toggleSidebar }) => {
 
   const projects = [
     { name: "Aura.js", icon: <FaReact className="text-[#3577e7]" />, path: "/AURA" },
-    { name: "Event.js", icon: <FaJs className="text-[#d7cb28]" />, path: "/" },
+    // { name: "WeatherApp.js", icon: <FaJs className="text-[#d7cb28]" />, path: "/WaetherApp" },
   ];
 
   return (
@@ -45,7 +45,7 @@ const SidebarWithBox = ({ isOpen, toggleSidebar }) => {
       <Sidebar toggleSidebar={toggleSidebar} />
 
       {isOpen && (
-        <div className="bg-black h-[92vh] md:w-[16vw] text-white border-r border-[#ffffff32] overflow-y-auto w-[54vw]  ">
+        <div className="bg-black h-[92vh] md:w-[16vw] text-white border-r border-[#ffffff32] overflow-y-auto w-[55vw]  ">
           <div className="flex items-center px-4 justify-between py-3">
             <span className="text-[12px]">EXPLORER</span>
             <IoIosMore />
@@ -123,17 +123,28 @@ const SidebarWithBox = ({ isOpen, toggleSidebar }) => {
 // export default SidebarWithBox;
 
 const Sidebar = ({ toggleSidebar }) => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="h-[92vh] w-[14vw] md:w-[5vw] lg:w-[3.5vw] border-r border-[#ffffff32] flex flex-col justify-between px-2 py-4">
       
       {/* Top Icons */}
       <div className="space-y-9 flex flex-col items-center">
         <IconWrapper><VscFiles onClick={toggleSidebar}/></IconWrapper>
-        <IconWrapper>< VscExtensions/></IconWrapper>
-        <IconWrapper><VscSearch /></IconWrapper>
-        <IconWrapper><GiDiamondTrophy /></IconWrapper>
-        <IconWrapper><VscGithub /></IconWrapper>
-        <IconWrapper><VscFeedback /></IconWrapper>
+        <IconWrapper>< VscExtensions onClick={()=>{
+          navigate("/projects")
+        }} /></IconWrapper>
+        <IconWrapper><VscSearch onClick={()=>{
+          navigate("/")
+        }}/></IconWrapper>
+        <IconWrapper><GiDiamondTrophy onClick={()=>{
+          navigate("/achievements")
+        }}/></IconWrapper>
+        <IconWrapper><a href="https://github.com/SauravDutta002/REACT-WEATHER-APP" target='_blank'><VscGithub/></a></IconWrapper>
+        <IconWrapper><VscFeedback  onClick={()=>{
+          navigate("/contact")
+        }}/></IconWrapper>
 
       </div>
 

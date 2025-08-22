@@ -13,9 +13,6 @@ import Typewriter from "typewriter-effect";
 import { VscSplitHorizontal } from "react-icons/vsc";
 import { SiExpress } from "react-icons/si";
 
-
-
-
 // Terminal
 
 import { VscTerminalPowershell } from "react-icons/vsc";
@@ -28,11 +25,14 @@ import { VscChromeClose } from "react-icons/vsc";
 
 
 const Skills = () => {
+
+
+
   const skillIcons = {
-    React: <FaReact className="text-[#3577e7] inline ml-2" />,
     MongoDB: <SiMongodb className="text-[#13d113] inline ml-2" />,
     "Node.js": <IoLogoNodejs className="text-[#13d113] inline ml-2" />,
     JavaScript: <FaSquareJs className="text-[#ece22d] inline ml-2" />,
+    React: <FaReact className="text-[#3577e7] inline ml-2" />,
     Python: <FaPython className="text-[#e9f024] inline ml-2" />,
     Git: <FaGitAlt className="text-[#f05724] inline ml-2" />,
     Framer: <SiFramer className="text-[#8d8d8d] inline ml-2" />,
@@ -92,7 +92,7 @@ const icons = [
         ))}
 
         {/* Additional Code Lines */}
-        <div>
+        {/* <div>
           <span className="text-gray-500">12&nbsp;&nbsp;</span>
           <span className="text-[#ec6e40]">#include</span>{" "}
           <span className="text-[#5482de]">&lt;iostream&gt;</span>
@@ -116,18 +116,26 @@ const icons = [
         </div>
         <div>
           <span className="text-gray-500">17&nbsp;&nbsp;</span>&#125;
-        </div>
+        </div> */}
 
         <div className="flex items-center">
           <span className="text-gray-500">18&nbsp;&nbsp;</span>
           <Typewriter
-            options={{
-              strings: [
-                '<span class="text-[#ec6e40]">export</span> <span class="text-white">default</span> <span class="text-[#9cdcfe]">SauravSkills</span>',
-              ],
-              autoStart: true,
-              loop: false,
-            }}
+          options={{
+          autoStart: true,
+          loop: false,
+          delay: 100,
+          html: true,
+          cursor: '|',
+        }}
+        onInit={(typewriter) => {
+          typewriter
+            .typeString(
+                '<span class="text-[#ec6e40]">export</span> <span class="text-white">default</span> <span class="text-[#9cdcfe]">SauravSkills</span>;',
+              
+            )
+            .start();
+        }}
           />
         </div>
       </div>
@@ -190,6 +198,7 @@ const icons = [
       </div>
     ))}
   </div>
+
 
 </div>
 

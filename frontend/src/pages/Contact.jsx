@@ -5,16 +5,19 @@ import { IoMdMail } from "react-icons/io";
 import Notification from '../components/Notification';
 import { VscSync } from "react-icons/vsc";
 
+import { FiInstagram } from "react-icons/fi";
 
 
 import { useOutletContext } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-const { setNotification } = useOutletContext();
+  const { setNotification } = useOutletContext();
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
+
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -23,9 +26,10 @@ const { setNotification } = useOutletContext();
   const handleSubmit = async (e) => {
     e.preventDefault();
       setLoading(true); // start spinner
+      setNotification(null);
 
     try {
-      const res = await fetch('http://localhost:5000/send-email', {
+      const res = await fetch('https://myportpholio-sauravdutta.onrender.com/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
@@ -35,11 +39,15 @@ const { setNotification } = useOutletContext();
 
       const data = await res.json();
       setNotification(data.success);
-        if (data.success) {
-      setForm({ name: '', email: '', message: '' });
+          
+       if (data.success) {
+      // Reset form after successful submission
+      setForm({ name: '', email: '', subject: '', message: '' });
     }
+
     } catch (err) {
       setNotification(false);
+      // setForm({ name: '', email: '', subject: '', message: '' });
     }
     finally {
     setLoading(false); // stop spinner
@@ -341,15 +349,15 @@ const { setNotification } = useOutletContext();
         <form onSubmit={handleSubmit} className="w-full max-w-xl flex flex-col gap-5 px-4">
           <input 
             className="w-full px-4 py-2 bg-[#ffffff07] border border-white/20 rounded focus:outline-none"
-            type="text" name="name" placeholder="Name" onChange={handleChange} required 
+            type="text" name="name" placeholder="Name" value={form.name} onChange={handleChange} required 
           />
           <input 
             className="w-full px-4 py-2 bg-[#ffffff07] border border-white/20 rounded focus:outline-none"
-            type="email" name="email" placeholder="Email" onChange={handleChange} required 
+            type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} required 
           />
           <textarea 
             className="w-full h-20 px-4 py-2 bg-[#ffffff07] border border-white/20 rounded resize-none focus:outline-none"
-            name="message" placeholder="Your message" onChange={handleChange} required 
+            name="message" placeholder="Your message" value={form.message} onChange={handleChange} required 
           />
           <button 
             type="submit" 
@@ -366,7 +374,9 @@ const { setNotification } = useOutletContext();
           <div className="flex justify-center items-center gap-8 text-3xl mt-4">
             <a href="https://github.com/SauravDutta002" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
             <a href="https://www.linkedin.com/in/saurav-dutta-450355315/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+            <a href="https://www.instagram.com/sauravdutta02/?igsh=MThsc2lub2NjZmNrcw%3D%3D#"><FiInstagram/></a>
             <a href="mailto:sauravdutta0219@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><IoMdMail /></a>
+            
           </div>
         </form>
 

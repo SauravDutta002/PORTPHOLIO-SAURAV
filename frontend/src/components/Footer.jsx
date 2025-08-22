@@ -32,7 +32,7 @@ const Footer = ({ notification }) => {
   
 
   return (
-  <div className='text-[#ffffff68] w-full border-t border-[#ffffff32] h-[10vh] flex justify-between items-center px-0 text-2xl sm:text-base'>
+  <div className='text-[#ffffff68] w-full border-t border-[#ffffff32] h-[10vh] flex justify-between items-center px-0 text-2xl z-50 sm:text-base'>
   <div className='flex gap-2 items-center'>
     <div className='bg-[#ffffff1f] text-white md:px-2 md:py-[2px] px-2 py-2 '><VscRemote/></div>
     <div><VscSync/></div>
@@ -42,9 +42,9 @@ const Footer = ({ notification }) => {
    
 
       <div className='flex gap-3 justify-center items-center'>
-        <div><VscGithub/></div>
-        <div><FaLinkedin/></div>
-        <div><FiInstagram/></div>
+        <div><a href="https://github.com/SauravDutta002"><VscGithub/></a></div>
+        <div><a href="https://www.linkedin.com/in/saurav-dutta-450355315/"><FaLinkedin/></a></div>
+        <div><a href="https://www.instagram.com/sauravdutta02/?igsh=MThsc2lub2NjZmNrcw%3D%3D#"><FiInstagram/></a></div>
       </div>
 
 
