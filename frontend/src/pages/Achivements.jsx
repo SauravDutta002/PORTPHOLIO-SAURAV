@@ -14,6 +14,16 @@ import expo1 from "../assets/Images/ProjectExpo/expo1.jpeg";
 import expo2 from "../assets/Images/ProjectExpo/expo2.jpeg";
 import expo3 from "../assets/Images/ProjectExpo/expo3.jpeg";
 
+//worskshop
+
+import WORKSHOP1 from "../assets/Images/Workshop/WORKSHOP1.jpeg";
+import WORKSHOP2 from "../assets/Images/Workshop/WORKSHOP2.jpeg";
+import WORKSHOP3 from "../assets/Images/Workshop/WORKSHOP3.jpeg";
+import WORKSHOP4 from "../assets/Images/Workshop/WORKSHOP4.jpeg"; 
+import WORKSHOP5 from "../assets/Images/Workshop/WORKSHOP5.jpeg";
+import WORKSHOP6 from "../assets/Images/Workshop/WORKSHOP6.jpeg";
+import WORKSHOP7 from "../assets/Images/Workshop/WORKSHOP7.jpeg";
+
 const Achievements = () => {
     
   const achievements = [
@@ -32,6 +42,14 @@ const Achievements = () => {
       icon: <GiTrophy/>,
 
     },
+    {
+      images: [WORKSHOP1, WORKSHOP2, WORKSHOP3, WORKSHOP4, WORKSHOP5, WORKSHOP6, WORKSHOP7],
+      name: "WORKSHOP",
+      title: "Workshop Conductor – Drone Technology & Applications",
+      description: "Conducted a comprehensive workshop on drone technology, covering fundamentals, applications, and hands-on experience. Empowered participants with knowledge and skills to explore the exciting world of drones.",
+      icon: <GiWingedArrow/>,
+    },
+
   ];
 
   const [currentIndexes, setCurrentIndexes] = useState(
