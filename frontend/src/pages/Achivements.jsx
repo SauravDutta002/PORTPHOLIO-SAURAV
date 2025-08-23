@@ -43,7 +43,7 @@ const Achievements = () => {
 
     },
     {
-      images: [WORKSHOP1, WORKSHOP2, WORKSHOP3, WORKSHOP4, WORKSHOP5, WORKSHOP6, WORKSHOP7],
+      images: [WORKSHOP1, WORKSHOP3, WORKSHOP6],
       name: "WORKSHOP",
       title: "Workshop Conductor – Drone Technology & Applications",
       description: "Conducted a comprehensive workshop on drone technology, covering fundamentals, applications, and hands-on experience. Empowered participants with knowledge and skills to explore the exciting world of drones.",
