@@ -141,7 +141,7 @@ const Sidebar = ({ toggleSidebar }) => {
         <IconWrapper><GiDiamondTrophy onClick={()=>{
           navigate("/achievements")
         }}/></IconWrapper>
-        <IconWrapper><a href="https://github.com/SauravDutta002/REACT-WEATHER-APP" target='_blank'><VscGithub/></a></IconWrapper>
+        <IconWrapper><a href="https://github.com/SauravDutta002" target='_blank'><VscGithub/></a></IconWrapper>
         <IconWrapper><VscFeedback  onClick={()=>{
           navigate("/contact")
         }}/></IconWrapper>
