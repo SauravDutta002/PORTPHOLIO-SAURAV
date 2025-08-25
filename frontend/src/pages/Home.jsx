@@ -29,15 +29,27 @@ const Home = () => {
         <div className="font-medium  text-xl sm:text-3xl md:text-[45px] text-gray-400 mt-3 min-h-[70px]">
           <Typewriter
             options={{
+//              strings: [
+//   'I am a passionate Web Developer.',
+//   'I am a skilled MERN Stack Developer.',
+//   'I am an experienced FPV Drone Pilot.',
+//   'I design and build custom drones.',
+//   'I develop fast, user-friendly web apps.',
+//   'I combine tech expertise with creativity.',
+//   'I transform ideas into real-world solutions.',
+// ],
              strings: [
-  'I am a passionate Web Developer.',
-  'I am a skilled MERN Stack Developer.',
-  'I am an experienced FPV Drone Pilot.',
-  'I design and build custom drones.',
-  'I develop fast, user-friendly web apps.',
-  'I combine tech expertise with creativity.',
-  'I transform ideas into real-world solutions.',
+               'I am turning ideas into reality.',
+               'I am a skilled MERN Stack Developer.',
+               'I am a passionate Web Developer.',
+               'I am an experienced FPV Drone Pilot.',
+               'I am a creator of custom drones.',
+               'I am a builder of fast, user-friendly apps.',
+               'I am where tech meets creativity.',
 ],
+
+
+
               autoStart: true,
               loop: true,
               delay:90,
