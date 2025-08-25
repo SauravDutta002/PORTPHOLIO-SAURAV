@@ -29,7 +29,7 @@ const Contact = () => {
       setNotification(null);
 
     try {
-      const res = await fetch('https://myportpholio-sauravdutta.onrender.com/send-email', {
+      const res = await fetch('https://portpholio-saurav-new.onrender.com/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
