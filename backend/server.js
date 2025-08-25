@@ -41,5 +41,5 @@ app.post('/send-email', async (req, res) => {
 });
 
 app.listen(5000, () => {
-  console.log('Server started on port 5000');
+  console.log(`Server started on port http://localhost:5000`);
 });
