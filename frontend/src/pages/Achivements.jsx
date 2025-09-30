@@ -42,9 +42,9 @@ const Achievements = () => {
 
     {
       images: [TakeThon1 , TakeThon2 , TakeThon3],
-      name: "Takeathon 4.0 (SIH internal Hackathon",
-      title: "Winner - AlgoWars 2025",
-      description: "Team AURA won 1st place at ALGOWAR 2025, exemplifying exceptional innovation, dedication, and collaborative excellence.",
+      name: "Takeathon 4.0 (SIH internal Hackathon)",
+      title: "Winner – Tekathon 4.0 | Robotics & Drones Theme",
+      description: "Team AURA emerged as the only winner in the Robotics & Drones theme, securing a Top 50 spot out of 800+ teams at Tekathon 4.0.",
       icon: <GiWingedArrow/>,
     },
 
