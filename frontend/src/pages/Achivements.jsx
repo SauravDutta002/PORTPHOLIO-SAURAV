@@ -24,6 +24,12 @@ import WORKSHOP5 from "../assets/Images/Workshop/WORKSHOP5.jpeg";
 import WORKSHOP6 from "../assets/Images/Workshop/WORKSHOP6.jpeg";
 import WORKSHOP7 from "../assets/Images/Workshop/WORKSHOP7.jpeg";
 
+//Algowars
+
+import Algowars1 from "../assets/Images/Algowars/Algowars1.jpg"
+import Algowars2 from "../assets/Images/Algowars/Algowars2.jpg"
+import Algowars3 from "../assets/Images/Algowars/Algowars3.jpg"
+
 const Achievements = () => {
     
   const achievements = [
@@ -47,6 +53,13 @@ const Achievements = () => {
       name: "WORKSHOP",
       title: "Workshop Conductor – Drone Technology & Applications",
       description: "Conducted a comprehensive workshop on drone technology, covering fundamentals, applications, and hands-on experience. Empowered participants with knowledge and skills to explore the exciting world of drones.",
+      icon: <GiWingedArrow/>,
+    },
+    {
+      images: [Algowars1 , Algowars2 , Algowars3],
+      name: "Algowars",
+      title: "Winner - AlgoWars 2025",
+      description: "Team AURA won 1st place at ALGOWAR 2025, exemplifying exceptional innovation, dedication, and collaborative excellence.",
       icon: <GiWingedArrow/>,
     },
 
