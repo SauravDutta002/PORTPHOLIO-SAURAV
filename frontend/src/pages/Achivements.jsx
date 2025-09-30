@@ -30,9 +30,39 @@ import Algowars1 from "../assets/Images/Algowars/Algowars1.jpg"
 import Algowars2 from "../assets/Images/Algowars/Algowars2.jpg"
 import Algowars3 from "../assets/Images/Algowars/Algowars3.jpg"
 
+//Takethon4.0
+
+import TakeThon1 from "../assets/Images/TakeaThon4.0/TakeThon1.jpg"
+import TakeThon2 from "../assets/Images/TakeaThon4.0/TakeThon2.jpg"
+import TakeThon3 from "../assets/Images/TakeaThon4.0/TakeThon3.jpg"
+
 const Achievements = () => {
     
   const achievements = [
+
+    {
+      images: [TakeThon1 , TakeThon2 , TakeThon3],
+      name: "Takeathon 4.0 (SIH internal Hackathon",
+      title: "Winner - AlgoWars 2025",
+      description: "Team AURA won 1st place at ALGOWAR 2025, exemplifying exceptional innovation, dedication, and collaborative excellence.",
+      icon: <GiWingedArrow/>,
+    },
+
+     {
+      images: [WORKSHOP1, WORKSHOP3, WORKSHOP6],
+      name: "WORKSHOP",
+      title: "Workshop Conductor – Drone Technology & Applications",
+      description: "Conducted a comprehensive workshop on drone technology, covering fundamentals, applications, and hands-on experience. Empowered participants with knowledge and skills to explore the exciting world of drones.",
+      icon: <GiWingedArrow/>,
+    },
+    {
+      images: [Algowars1 , Algowars2 , Algowars3],
+      name: "Algowars",
+      title: "Winner - AlgoWars 2025",
+      description: "Team AURA won 1st place at ALGOWAR 2025, exemplifying exceptional innovation, dedication, and collaborative excellence.",
+      icon: <GiWingedArrow/>,
+    },
+    
     {
       images: [hack1, hack2, hack3],
       name: "HACKATHON",
@@ -48,21 +78,6 @@ const Achievements = () => {
       icon: <GiTrophy/>,
 
     },
-    {
-      images: [WORKSHOP1, WORKSHOP3, WORKSHOP6],
-      name: "WORKSHOP",
-      title: "Workshop Conductor – Drone Technology & Applications",
-      description: "Conducted a comprehensive workshop on drone technology, covering fundamentals, applications, and hands-on experience. Empowered participants with knowledge and skills to explore the exciting world of drones.",
-      icon: <GiWingedArrow/>,
-    },
-    {
-      images: [Algowars1 , Algowars2 , Algowars3],
-      name: "Algowars",
-      title: "Winner - AlgoWars 2025",
-      description: "Team AURA won 1st place at ALGOWAR 2025, exemplifying exceptional innovation, dedication, and collaborative excellence.",
-      icon: <GiWingedArrow/>,
-    },
-
   ];
 
   const [currentIndexes, setCurrentIndexes] = useState(
