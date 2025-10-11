@@ -71,6 +71,7 @@ const tabs = [
   { name: "Projects.jsx", icon: <FaReact />, path: "/projects" },
   { name: "Achievements.jsx", icon: <FaReact />, path: "/achievements" },
   { name: "contact.jsx", icon: <FaReact />, path: "/contact" },
+  // { name: "TeamAura.jsx", icon: <FaReact />, path: "/TeamAURA" },
 ];
 
 const Header = () => {

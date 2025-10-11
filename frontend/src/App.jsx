@@ -9,6 +9,8 @@ import Achivements from "./pages/Achivements";
 import Lodar from "./components/Lodar";
 import Contact from "./pages/Contact";
 import ShowProject from "./components/ShowProject";
+import TeamAura from "./pages/TeamAura";
+import Notfound from "./pages/Notfound";
 
 const App = () => {
 
@@ -34,6 +36,8 @@ const [isLoading, setisLoading] = useState(true);
         <Route path="/achievements" element={<Achivements/>}/>
         <Route path="/contact"  element={<Contact/>}/>
         <Route path="/AURA" element={<ShowProject />}/>
+        <Route path="/TeamAURA" element={<TeamAura />}/>
+        <Route  path="*" element={<Notfound/>}/>
       </Route>
 
       </Routes> }
