@@ -11,6 +11,8 @@ import Contact from "./pages/Contact";
 import ShowProject from "./components/ShowProject";
 import TeamAura from "./pages/TeamAura";
 import Notfound from "./pages/Notfound";
+import CommandPi from "./pages/CommandPi";
+import Astra from "./pages/Astra";
 
 const App = () => {
 
@@ -37,6 +39,8 @@ const [isLoading, setisLoading] = useState(true);
         <Route path="/contact"  element={<Contact/>}/>
         <Route path="/AURA" element={<ShowProject />}/>
         <Route path="/TeamAURA" element={<TeamAura />}/>
+        <Route path="/CommandPi" element={<CommandPi />}/>
+        <Route path="/Astra" element={<Astra/>}/>
         <Route  path="*" element={<Notfound/>}/>
       </Route>
 
