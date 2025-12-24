@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { GiTrophy } from "react-icons/gi";
 import { GiWingedArrow } from "react-icons/gi";
 import { GiDiamondTrophy } from "react-icons/gi";
+import { BsAwardFill } from "react-icons/bs";
+import SIHIcon from '../components/SIHIcon';
 
 //hackathon 
 import hack1 from "../assets/Images/kraf/hackwin1.jpeg";
@@ -36,18 +38,59 @@ import TakeThon1 from "../assets/Images/TakeaThon4.0/TakeThon1.jpg"
 import TakeThon2 from "../assets/Images/TakeaThon4.0/TakeThon2.jpg"
 import TakeThon3 from "../assets/Images/TakeaThon4.0/TakeThon3.jpg"
 
+//HackTheVault 2.0
 import HackVault1 from "../assets/Images/HackTheVault/HackVault1.jpg"
 import HackVault2 from "../assets/Images/HackTheVault/HackVault2.jpg"
 import HackVault3 from "../assets/Images/HackTheVault/HackVault3.jpg"
+
+//ByteVerse 1.0
+import Byteverse1 from "../assets/Images/Byteverse/Byteverse1.jpg"
+import Byteverse2 from "../assets/Images/Byteverse/Byteverse2.jpg"
+import Byteverse3 from "../assets/Images/Byteverse/Byteverse3.jpg"
+
+// //Zinnovatio3.0
+import Zinnovation1 from "../assets/Images/Zinnovatio3.0/Zinnovation1.jpg"
+import Zinnovation2 from "../assets/Images/Zinnovatio3.0/Zinnovation2.jpg"
+import Zinnovation3 from "../assets/Images/Zinnovatio3.0/Zinnovation3.jpg"
+
+//SMART INDIA HACKATHON 2025
+import SIH2025_1 from "../assets/Images/SIH2025/SIH2025_1.jpg"
+import SIH2025_2 from "../assets/Images/SIH2025/SIH2025_2.jpg"
+import SIH2025_3 from "../assets/Images/SIH2025/SIH2025_3.jpg"
 
 const Achievements = () => {
     
   const achievements = [
 
     {
+      images: [SIH2025_1 , SIH2025_2 , SIH2025_3],
+      name: "SMART INDIA HACKATHON 2025",
+      title: "Smart India Hackathon 2025 – Grand Finale",
+      description: "Proudly represented Team AURA at the national-level Smart India Hackathon 2025 – Hardware Grand Finale in Hyderabad",
+      icon: <SIHIcon size="w-10 h-10 "/>
+
+    },
+
+    {
+      images: [Zinnovation1 , Zinnovation2 , Zinnovation3],
+      name: "ZINNOVATIO 3.0",
+      title: "Honored with Best in Hardware – Zinnovatio 3.0",
+      description: "Honored with the “Best in Hardware” award at Zinnovatio 3.0 after an intensive 36-hour innovation challenge",
+      icon: <BsAwardFill/>,
+    },
+
+    {
+      images: [Byteverse1 , Byteverse2 , Byteverse3],
+      name: "BYTEVERSE 1.0",
+      title: "Honored for Technology Excellence – Byteverse 1.0 (National-Level Hackathon)",
+      description: "Honored with the Best Use of Technology award at the national-level Byteverse 1.0 Hackathon",
+      icon: <BsAwardFill/>,
+    },
+
+    {
       images: [HackVault1 , HackVault2 , HackVault3],
       name: "Hack The Vault 2025 ",
-      title: "Winner – Hack The Vault 2025 (Hack The Vault 2025) ",
+      title: "Winner – Hack The Vault 2025 (National-Level Hackathon) ",
       description: "Team AURA emerged as the top winner among 120+ teams in a prestigious 24-hour national-level hackathon hosted by CGC University, Mohali.",
       icon: <GiWingedArrow/>,
     },
@@ -60,13 +103,14 @@ const Achievements = () => {
       icon: <GiWingedArrow/>,
     },
 
-     {
+    {
       images: [WORKSHOP1, WORKSHOP3, WORKSHOP6],
       name: "WORKSHOP",
       title: "Workshop Conductor – Drone Technology & Applications",
       description: "Conducted a comprehensive workshop on drone technology, covering fundamentals, applications, and hands-on experience. Empowered participants with knowledge and skills to explore the exciting world of drones.",
       icon: <GiWingedArrow/>,
     },
+    
     {
       images: [Algowars1 , Algowars2 , Algowars3],
       name: "Algowars",
@@ -119,7 +163,7 @@ const Achievements = () => {
           style={{ fontFamily: 'Fira Code, monospace' }}
         >
           {/* Title Box */}
-          <div className="absolute -top-5 left-5 bg-[#0f0f0f] text-[#ec6e40] px-3 sm:px-4 py-1 flex justify-center items-center gap-2 rounded-md text-xs sm:text-sm font-semibold shadow-md border border-[#ec6e40]">
+          <div className="absolute -top-5 left-5 bg-[#0f0f0f] text-[#ec6e40] z-20 px-3 sm:px-4 py-1 flex justify-center items-center gap-2 rounded-md text-xs sm:text-sm font-semibold shadow-md border border-[#ec6e40]">
             <span className='text-[gold] text-xl sm:text-2xl'> {achievement.icon}</span>  
             <span>{achievement.name}</span>
           </div>
