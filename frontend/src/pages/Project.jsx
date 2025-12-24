@@ -23,7 +23,6 @@ import weather from "../assets/Images/projects/weather.jpg"
 import Events from "../assets/Images/projects/Events.png"
 
 
-
 const projects = [
     {
     title: "AURA",

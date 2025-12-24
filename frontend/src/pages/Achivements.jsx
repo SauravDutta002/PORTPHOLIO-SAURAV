@@ -36,9 +36,21 @@ import TakeThon1 from "../assets/Images/TakeaThon4.0/TakeThon1.jpg"
 import TakeThon2 from "../assets/Images/TakeaThon4.0/TakeThon2.jpg"
 import TakeThon3 from "../assets/Images/TakeaThon4.0/TakeThon3.jpg"
 
+import HackVault1 from "../assets/Images/HackTheVault/HackVault1.jpg"
+import HackVault2 from "../assets/Images/HackTheVault/HackVault2.jpg"
+import HackVault3 from "../assets/Images/HackTheVault/HackVault3.jpg"
+
 const Achievements = () => {
     
   const achievements = [
+
+    {
+      images: [HackVault1 , HackVault2 , HackVault3],
+      name: "Hack The Vault 2025 ",
+      title: "Winner – Tekathon 4.0 | Robotics & Drones Theme",
+      description: "Team AURA emerged as the top winner among 120+ teams in a prestigious 24-hour national-level hackathon hosted by CGC University, Mohali.",
+      icon: <GiWingedArrow/>,
+    },
 
     {
       images: [TakeThon1 , TakeThon2 , TakeThon3],
@@ -93,8 +105,6 @@ const Achievements = () => {
 
     return () => clearInterval(interval);
   }, []);
-
-  
 
   return (
    

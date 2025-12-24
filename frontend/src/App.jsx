@@ -24,7 +24,6 @@ const [isLoading, setisLoading] = useState(true);
   } , 2500);
   return ()=> clearTimeout(timer);
  } , []);
-
  
   return (
     
@@ -49,7 +48,6 @@ const [isLoading, setisLoading] = useState(true);
     </div>
 
     // <Lodar/>
-
 
   );
 };
