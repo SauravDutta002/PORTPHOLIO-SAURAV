@@ -47,14 +47,14 @@ const Achievements = () => {
     {
       images: [HackVault1 , HackVault2 , HackVault3],
       name: "Hack The Vault 2025 ",
-      title: "Winner – Tekathon 4.0 | Robotics & Drones Theme",
+      title: "Winner – Hack The Vault 2025 (Hack The Vault 2025) ",
       description: "Team AURA emerged as the top winner among 120+ teams in a prestigious 24-hour national-level hackathon hosted by CGC University, Mohali.",
       icon: <GiWingedArrow/>,
     },
 
     {
       images: [TakeThon1 , TakeThon2 , TakeThon3],
-      name: "Takeathon 4.0 (SIH internal)",
+      name: "Tekathon 4.0 (SIH internal)",
       title: "Winner – Tekathon 4.0 | Robotics & Drones Theme",
       description: "Team AURA emerged as the only winner in the Robotics & Drones theme, securing a Top 50 spot out of 800+ teams at Tekathon 4.0.",
       icon: <GiWingedArrow/>,
