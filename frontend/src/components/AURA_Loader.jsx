@@ -361,7 +361,7 @@ const IntroLoader = ({ onFinish }) => {
 
   return (
     <LoaderWrapper className={hide ? "fade-out" : ""}>
-      <div className="animation-box">
+      <div className="animation-box flex justify-center align-middle">
         <div className="loader-wrapper">
           <div className="loader">
             <svg viewBox="0 0 86 80">
@@ -404,14 +404,19 @@ const LoaderWrapper = styled.div`
   }
 
   /* Triangle slides left smoothly */
+
   .loader-wrapper {
     display: flex;
     align-items: center;
     position: relative;
 
+    /* FIX: Keep loader centered even after shifting left */
+    left: 36px;
+
     animation: shiftLeft 0.7s ease forwards;
     animation-delay: 3s;
-  }
+}
+
 
   @keyframes shiftLeft {
     0% {
