@@ -13,7 +13,7 @@ import TeamAura from "./pages/TeamAura";
 import Notfound from "./pages/Notfound";
 import CommandPi from "./pages/CommandPi";
 import Astra from "./pages/Astra";
-
+import IDcard from "./components/AURA_Loader"
 const App = () => {
 
 const [isLoading, setisLoading] = useState(true);
@@ -40,7 +40,9 @@ const [isLoading, setisLoading] = useState(true);
         <Route path="/TeamAURA" element={<TeamAura />}/>
         <Route path="/CommandPi" element={<CommandPi />}/>
         <Route path="/Astra" element={<Astra/>}/>
+        <Route  path="/test" element={<IDcard/>}/>
         <Route  path="*" element={<Notfound/>}/>
+
       </Route>
 
       </Routes> }

@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@dimforge/rapier3d-compat": "^0.19.3",
     "@react-three/drei": "^10.0.7",
     "@react-three/fiber": "^9.1.2",
+    "@react-three/rapier": "^2.2.0",
     "@tailwindcss/vite": "^4.1.6",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.21",

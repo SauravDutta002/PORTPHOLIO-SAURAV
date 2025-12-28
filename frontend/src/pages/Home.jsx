@@ -4,11 +4,12 @@ import { DiCodeigniter } from 'react-icons/di';
 import Typewriter from 'typewriter-effect';
 import { useNavigate } from 'react-router-dom';
 import { VscDebugStart } from "react-icons/vsc";
+import AuraLogo from "../assets/Aura.png"
 const Home = () => {
   
   const navigate = useNavigate();
-  const handelClick = () => {
-    navigate('/projects');
+  const handelClick = (path) => {
+    navigate(path);
   };
 
  
@@ -60,7 +61,7 @@ const Home = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex  space-x-4 mt-6">
+        <div className="flex  space-x-4 mt-6 flex-wrap gap-2">
           <button
             
             className="md:px-6 py-2 px-3 border border-[#ffffff62]  rounded-2xl text-white hover:border-white transition flex items-center justify-center gap-2 backdrop-blur-[99px] "
@@ -71,12 +72,39 @@ const Home = () => {
             
           </button>
           <button
-            onClick={handelClick}
+            onClick={()=>{handelClick("/projects")}}
             className="md:px-6 py-2 px-3 flex items-center gap-2 border border-[#ffffff62] rounded-2xl text-white hover:border-white transition"
           >
             <DiCodeigniter size={20} className='text-orange-500' />
             <span>Explore</span>
           </button>
+
+          {/* <button
+            onClick={()=>{handelClick("/TeamAura")}}
+            className="md:px-6 py-2 px-3 flex items-center gap-2 border border-[#ffffff62] rounded-2xl text-white hover:border-white transition"
+          >
+
+            <span><img src={AuraLogo} alt="" className='h-6'/></span>
+          </button> */}
+
+<button
+  onClick={() => handelClick("/TeamAura")}
+  className="
+    flex items-center justify-center gap-2
+    px-4 py-2 md:px-6
+    rounded-2xl border border-white/40
+    text-white
+    hover:border-white hover:bg-white/10
+    transition-all duration-300
+    active:scale-95
+  "
+>
+  <img 
+    src={AuraLogo} 
+    alt="Aura Logo" 
+    className="h-6 w-6 md:h-7 md:w-7 object-contain"
+  />
+</button>
 
         </div>
         
