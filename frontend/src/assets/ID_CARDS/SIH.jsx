@@ -56,9 +56,9 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
   const segmentProps = { type: "dynamic", canSleep: true, colliders: false, angularDamping: 2, linearDamping: 2 };
 
   // Load your card + clamp + clip
-  const { nodes, materials } = useGLTF("/AURA_CARD.glb");
+  const { nodes, materials } = useGLTF("SIH/SIH_IDCARD.glb");
 
-  const texture = useTexture("/Aura_tag.png");
+  const texture = useTexture("SIH/SIH_Lanyard.png");
 
   const { width, height } = useThree((state) => state.size);
 
