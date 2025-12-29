@@ -1,176 +1,6 @@
-
-// // // import React, { useState, useEffect } from 'react';
-// // // import Loader from '../components/AURA_Loader'; // <-- import your loader here
-// // // import IDcard from "../components/IDCARD"
-// // // const TeamAura = () => {
-
-// // //   const [loading, setLoading] = useState(true);
-
-// // //   // Simulate loading effect (2 seconds)
-// // //   useEffect(() => {
-// // //     const timer = setTimeout(() => {
-// // //       setLoading(false);
-// // //     }, 5200);
-
-// // //     return () => clearTimeout(timer);
-// // //   }, []);
-
-// // //   return (
-// // //     <div className="min-h-screen w-full bg-black text-white">
-      
-// // //       {/* Show Loader first */}
-// // //       {loading ? (
-// // //         <Loader />  // <-- your Loader component
-// // //       ) : (
-// // //         <div className="p-6">
-// // //           <h1 className="text-3xl font-bold">Team Aura</h1>
-// // //           <p className="mt-4 text-gray-300">Welcome to the Team Aura page.</p>
-// // //           <IDcard/>
-// // //         </div>
-// // //       )}
-
-// // //     </div>
-// // //   );
-// // // };
-
-// // // export default TeamAura;
-
-// // import React, { useState, useEffect, useRef } from 'react';
-// // import Loader from '../components/AURA_Loader';
-// // import IDcard from "../components/IDCARD";
-
-// // const TeamAura = () => {
-// //   const [loading, setLoading] = useState(true);
-// //   const audioRef = useRef(null);
-
-// //   useEffect(() => {
-// //     // Play audio when loader starts
-// //     if (audioRef.current) {
-// //       audioRef.current.volume = 1.0;
-// //       audioRef.current.play().catch(() => {});
-// //     }
-
-// //     // Loading ends but audio continues
-// //     const timer = setTimeout(() => {
-// //       setLoading(false);
-// //     }, 5200);
-
-// //     // Cleanup (runs ONLY when leaving page)
-// //     return () => {
-// //       clearTimeout(timer);
-// //       if (audioRef.current) {
-// //         audioRef.current.pause();
-// //         audioRef.current.currentTime = 0;
-// //       }
-// //     };
-// //   }, []);
-
-// //   return (
-// //     <div className="min-h-screen w-full bg-black text-white">
-
-// //       {/* Hidden audio element */}
-// //       <audio ref={audioRef} src="/Audio/AURA_audio.mp4" />
-
-// //       {loading ? (
-// //         <Loader />
-// //       ) : (
-// //         <div className="p-6">
-// //           <h1 className="text-3xl font-bold">Team Aura</h1>
-// //           <p className="mt-4 text-gray-300">Welcome to the Team Aura page.</p>
-// //           <IDcard />
-// //         </div>
-// //       )}
-
-// //     </div>
-// //   );
-// // };
-
-// // export default TeamAura;
-
-
-
-// import React, { useState, useEffect, useRef } from 'react';
-// import Loader from '../components/AURA_Loader';
-// import IDcard from "../components/IDCARD";
-
-// const TeamAura = () => {
-//   const [loading, setLoading] = useState(true);
-//   const audioRef = useRef(null);
-
-//   useEffect(() => {
-//     if (audioRef.current) {
-//       const audio = audioRef.current;
-
-//       // Start audio from 2 seconds
-//       audio.currentTime = 1.5;
-
-//       // Start volume at 0 for fade-in
-//       audio.volume = 0;
-
-//       // Play audio
-//       audio.play().catch(() => {});
-
-//       // Fade-in duration (in ms)
-//       const fadeDuration = 1800; 
-//       const fadeSteps = 30;
-//       const volumeStep = 1 / fadeSteps;
-//       const intervalTime = fadeDuration / fadeSteps;
-
-//       let currentVolume = 0;
-
-//       const fadeInInterval = setInterval(() => {
-//         currentVolume += volumeStep;
-//         if (audio) audio.volume = Math.min(currentVolume, 1);
-
-//         // Stop interval when fade-in completes
-//         if (currentVolume >= 1) {
-//           clearInterval(fadeInInterval);
-//         }
-//       }, intervalTime);
-//     }
-
-//     const timer = setTimeout(() => {
-//       setLoading(false);
-//     }, 5200);
-
-//     return () => {
-//       clearTimeout(timer);
-
-//       // Stop audio on page exit
-//       if (audioRef.current) {
-//         audioRef.current.pause();
-//         audioRef.current.currentTime = 0;
-//       }
-//     };
-//   }, []);
-
-//   return (
-//     <div className="min-h-screen w-full bg-black text-white">
-
-//       {/* Hidden audio element */}
-//       <audio ref={audioRef} src="/Audio/AURA_audio.mp4" />
-
-//       {loading ? (
-//         <Loader />
-//       ) : (
-//         <div className="p-6">
-//           {/* <h1 className="text-3xl font-bold">Team Aura</h1>
-//           <p className="mt-4 text-gray-300">Welcome to the Team Aura page.</p> */}
-//           <IDcard />
-//         </div>
-//       )}
-
-//     </div>
-//   );
-// };
-
-// export default TeamAura;
-
-
 import React, { useState, useEffect, useRef } from "react";
 import Loader from "../components/AURA_Loader";
 import IDcard from "../components/IDCARD";
-
 
 const TeamAura = () => {
   const [loading, setLoading] = useState(true);
@@ -179,65 +9,90 @@ const TeamAura = () => {
   useEffect(() => {
     if (audioRef.current) {
       const audio = audioRef.current;
-
-      // Start audio from 1.5 seconds
       audio.currentTime = 1.5;
       audio.volume = 0;
-
       audio.play().catch(() => {});
-
-      const fadeDuration = 1800;
-      const fadeSteps = 30;
-      const volumeStep = 1 / fadeSteps;
-      const intervalTime = fadeDuration / fadeSteps;
-
-      let currentVolume = 0;
-
-      const fadeInInterval = setInterval(() => {
-        currentVolume += volumeStep;
-        audio.volume = Math.min(currentVolume, 1);
-
-        if (currentVolume >= 1) clearInterval(fadeInInterval);
-      }, intervalTime);
+      let v = 0;
+      const fade = setInterval(() => {
+        v += 0.033;
+        audio.volume = Math.min(v, 1);
+        if (v >= 1) clearInterval(fade);
+      }, 60);
     }
-
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 5200);
-
-    return () => {
-      clearTimeout(timer);
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0;
-      }
-    };
+    const timer = setTimeout(() => setLoading(false), 5200);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="w-full min-h-100vh bg-black text-white overflow-hidden">
-      {/* Hidden Audio */}
+    <div className="relative w-full flex bg-black flex-col md:flex-row gap-6 text-white py-10 px-4 sm:px-6 max-h-[84vh] overflow-y-scroll">
+
+      {/* AUDIO */}
       <audio ref={audioRef} src="/Audio/AURA_audio.mp4" />
 
+      {/* BACKDROP */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none"
+        style={{
+          backgroundImage: "url('/Images/clouds_bg.jpg')",
+        }}
+      ></div>
+      
       {loading ? (
         <Loader />
       ) : (
-        <div className="flex items-center justify-center w-full h-screen relative">
-          {/* Background Glow */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0e0e0e] to-black opacity-70 pointer-events-none" />
+        <div className="relative z-20 w-full min-h-screen px-6 md:px-20 py-10 animate-fadeIn">
 
-          {/* 3D ID Card */}
-          <div className="relative w-full h-full flex items-center justify-center">
-            {/* <Lanyard3D /> */}
-            <IDcard/>
+          {/* ============= TOP SECTION ============= */}
+          <div className="w-full flex flex-col md:flex-row items-start justify-between gap-14 mt-4">
+
+            {/* -------- LEFT : FULL WIDTH ID CARD -------- */}
+            <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+              <div className="relative w-full max-w-[500px] h-auto">
+                <IDcard />
+              </div>
+            </div>
+
+            {/* -------- RIGHT : STORY TEXT -------- */}
+            <div className="w-full md:w-1/2 space-y-8 md:pt-8">
+
+              <p className="text-xl md:text-2xl leading-relaxed text-gray-200 font-light tracking-wide">
+                <span className="font-semibold text-red-400">Team AURA</span> was built on a foundation of precision, creativity, and unbreakable ambition.
+              </p>
+
+              <p className="text-lg md:text-[1.25rem] leading-relaxed text-gray-300">
+                What began as a spark of curiosity evolved into a powerful identity —
+                a team known for crafting futuristic tech and conquering multiple hackathons.
+              </p>
+
+              <p className="text-lg md:text-[1.25rem] leading-relaxed text-gray-400">
+                The journey wasn’t easy, but each challenge shaped AURA into a symbol of 
+                discipline, innovation, and technical mastery.
+              </p>
+
+              <p className="text-lg md:text-[1.25rem] leading-relaxed text-gray-500">
+                Today, AURA stands stronger than ever — a vision carried with heart, built by skill, 
+                and led by <span className="text-red-300 font-medium">Saurav Dutta</span>.
+              </p>
+
+            </div>
           </div>
 
-          {/* Title Text */}
-          <div className="absolute top-10 text-center">
-           
-          </div>
         </div>
       )}
+
+      {/* ANIMATIONS */}
+      <style>
+        {`
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0px); }
+          }
+
+          .animate-fadeIn {
+            animation: fadeIn 1.3s ease-out;
+          }
+        `}
+      </style>
     </div>
   );
 };
