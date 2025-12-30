@@ -40,7 +40,7 @@ const [isLoading, setisLoading] = useState(true);
         <Route path="/TeamAURA" element={<TeamAura />}/>
         <Route path="/CommandPi" element={<CommandPi />}/>
         <Route path="/Astra" element={<Astra/>}/>
-        <Route  path="/test" element={<IDcard/>}/>
+        {/* <Route  path="/test" element={<IDcard/>}/> */}
         <Route  path="*" element={<Notfound/>}/>
 
       </Route>
