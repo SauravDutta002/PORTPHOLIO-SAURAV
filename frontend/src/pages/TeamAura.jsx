@@ -234,6 +234,8 @@ import { GiDiamondTrophy } from "react-icons/gi";
 import SIH_IDCARD from "../assets/ID_CARDS/SIH"
 import Tekathon_IDCARD from "../assets/ID_CARDS/Tekathon"
 import Byteverse_IDCARD from "../assets/ID_CARDS/Byteverse"
+import HackThevault_IDCARD from "../assets/ID_CARDS/HackTheVault"
+import KrafThink2025 from "../assets/ID_CARDS/KrafThink2025"
 
 const TeamAura = () => {
   const [loading, setLoading] = useState(true);
@@ -241,7 +243,7 @@ const TeamAura = () => {
 
   // 🔥 MAKE THE SYSTEM UPGRADABLE
   // Just add new ID card components here — everything works automatically
-  const legacyCards = [SIH_IDCARD ,Tekathon_IDCARD , Byteverse_IDCARD];
+  const legacyCards = [SIH_IDCARD ,Tekathon_IDCARD, Byteverse_IDCARD, HackThevault_IDCARD, KrafThink2025 ];
 
   useEffect(() => {
     if (audioRef.current) {
