@@ -87,7 +87,7 @@ const Home = () => {
             <span><img src={AuraLogo} alt="" className='h-6'/></span>
           </button> */}
 
-<button
+{/* <button
   onClick={() => handelClick("/TeamAura")}
   className="
     flex items-center justify-center gap-2
@@ -104,7 +104,7 @@ const Home = () => {
     alt="Aura Logo" 
     className="h-6 w-6 md:h-7 md:w-7 object-contain"
   />
-</button>
+</button> */}
 
         </div>
         
