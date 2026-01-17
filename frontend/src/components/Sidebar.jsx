@@ -36,9 +36,9 @@ const SidebarWithBox = ({ isOpen, toggleSidebar }) => {
   ];
 
   const projects = [
-    { name: "Aura.js", icon: <FaReact className="text-[#3577e7]" />, path: "/AURA" },
-    { name: "CommandPi.js", icon: <FaReact className="text-[#3577e7]" />, path: "/CommandPi" },
-    { name: "Astra.js", icon: <FaReact className="text-[#3577e7]" />, path: "/Astra" },
+    { name: "Aura.jsx", icon: <FaReact className="text-[#3577e7]" />, path: "/AURA" },
+    { name: "CommandPi.jxs", icon: <FaReact className="text-[#3577e7]" />, path: "/CommandPi" },
+    { name: "Astra.jsx", icon: <FaReact className="text-[#3577e7]" />, path: "/Astra" },
   ];
 
   return (
