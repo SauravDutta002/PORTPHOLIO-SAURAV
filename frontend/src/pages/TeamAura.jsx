@@ -489,11 +489,11 @@ import KrafThink2025 from "../assets/ID_CARDS/KrafThink2025";
 
 /* ─── Data ─────────────────────────────────────────────────────── */
 const LEGACY = [
-  { Card: SIH_IDCARD,          label: "Smart India Hackathon", year: "2023", rank: "Finalists",  color: "#4ec9b0" },
-  { Card: Tekathon_IDCARD,     label: "Tekathon",              year: "2023", rank: "Winners",    color: "#dcdcaa" },
-  { Card: Byteverse_IDCARD,    label: "Byteverse",             year: "2024", rank: "Top 3",      color: "#9cdcfe" },
-  { Card: HackThevault_IDCARD, label: "Hack The Vault",        year: "2024", rank: "Winners",    color: "#dcdcaa" },
-  { Card: KrafThink2025,       label: "KrafThink",             year: "2025", rank: "Champions",  color: "#c586c0" },
+  { Card: SIH_IDCARD,          label: "Smart India Hackathon", year: "2025", rank: "Finalists",  color: "#4ec9b0" },
+  { Card: Tekathon_IDCARD,     label: "Tekathon",              year: "2025", rank: "Winners",    color: "#dcdcaa" },
+  { Card: Byteverse_IDCARD,    label: "Byteverse",             year: "2025", rank: "Top 3",      color: "#9cdcfe" },
+  { Card: HackThevault_IDCARD, label: "Hack The Vault",        year: "2025", rank: "Winners",    color: "#dcdcaa" },
+  { Card: KrafThink2025,       label: "KrafThink",             year: "2025", rank: "Winners",  color: "#c586c0" },
 ];
 
 const STATS = [
