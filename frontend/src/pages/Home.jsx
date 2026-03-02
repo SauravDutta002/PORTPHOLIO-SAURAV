@@ -5,6 +5,7 @@ import Typewriter from 'typewriter-effect';
 import { useNavigate } from 'react-router-dom';
 import { VscDebugStart } from "react-icons/vsc";
 import AuraLogo from "../assets/Aura.png"
+import { GiAchievement } from "react-icons/gi";
 const Home = () => {
   
   const navigate = useNavigate();
@@ -12,8 +13,7 @@ const Home = () => {
     navigate(path);
   };
 
- 
-
+  
   return (
     <div
       className="text-white font-light px-4 md:px-6 py-10 relative "
@@ -61,7 +61,7 @@ const Home = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex  space-x-4 mt-6 flex-wrap gap-2">
+        <div className="flex  space-x-2 mt-6 flex-wrap gap-2">
           <button
             
             className="md:px-6 py-2 px-3 border border-[#ffffff62]  rounded-2xl text-white hover:border-white transition flex items-center justify-center gap-2 backdrop-blur-[99px] "
@@ -79,15 +79,26 @@ const Home = () => {
             <span>Explore</span>
           </button>
 
-          {/* <button
+          <button
+            onClick={()=>{handelClick("/achievements")}}
+            className="md:px-6 py-2 px-3 flex items-center gap-2 border border-[#ffffff62] rounded-2xl text-white hover:border-white transition"
+          >
+            <GiAchievement size={20} className='text-yellow-300' />
+            <span>Achievements</span>
+          </button>
+
+         
+
+          <button
             onClick={()=>{handelClick("/TeamAura")}}
             className="md:px-6 py-2 px-3 flex items-center gap-2 border border-[#ffffff62] rounded-2xl text-white hover:border-white transition"
           >
 
             <span><img src={AuraLogo} alt="" className='h-6'/></span>
-          </button> */}
+          </button>
 
-<button
+
+{/* <button
   onClick={() => handelClick("/TeamAura")}
   className="
     flex items-center justify-center gap-2
@@ -104,7 +115,8 @@ const Home = () => {
     alt="Aura Logo" 
     className="h-6 w-6 md:h-7 md:w-7 object-contain"
   />
-</button>
+</button> */}
+
 
         </div>
         
@@ -134,7 +146,6 @@ const Home = () => {
             .start();
         }}
       />
-      
     </div>
 
   <div><span className="text-gray-500">4&nbsp;&nbsp;</span>&nbsp;&nbsp;<span className="text-[#c586c0]">const</span> <span className="text-[#9cdcfe]">[</span><span className="text-[#9cdcfe]">introMessage</span>, <span className="text-[#9cdcfe]">setIntroMessage</span>] <span className="text-[#ec6e40]">=</span> <span className="text-[#c586c0]">useState</span><span className="text-[#5482de]">(</span><span className="text-[#9cdcfe]">"Hi, I'm Saurav, a web developer and FPV drone enthusiast."</span><span className="text-[#5482de]">)</span></div>
