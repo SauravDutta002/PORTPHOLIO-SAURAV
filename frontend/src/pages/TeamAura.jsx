@@ -625,8 +625,8 @@ const TeamAura = () => {
                   <pre className="jsdoc">
 {`/**
  * @team     AURA
- * @location Kolkata, India
- * @since    2022
+ * @location Chandigarh, India
+ * @since    2024
  */`}
                   </pre>
 
