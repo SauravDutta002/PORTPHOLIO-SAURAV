@@ -497,8 +497,8 @@ const LEGACY = [
 ];
 
 const STATS = [
-  { value: "5+", label: "hackathons",    token: "const" },
-  { value: "3",  label: "championships", token: "let"   },
+  { value: "15+", label: "hackathons",    token: "const" },
+  { value: "5",  label: "championships", token: "let"   },
   { value: "2+", label: "years_active",  token: "var"   },
   { value: "∞",  label: "ambition",      token: "fn"    },
 ];
